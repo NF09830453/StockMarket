@@ -1,36 +1,52 @@
 import logo from './logo.svg';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import Blogs from './ConfigPlayer/Blogs';
+import { BrowserRouter as Router, Route, Routes, Link, useLocation } from 'react-router-dom';
+import ConfigPlay from './ConfigPlayer/ConfigPlay';
+import GameMode from './GameM/GameMode';
 import './App.css';
 
 function App() {
+  const location = useLocation();
+  const hideButtons = () => {
+    // specify the routes for hidden buttons
+    
+    return(
+      location.pathname === '/ConfigPlay'||
+      location.pathname === '/GameMode'
+    ); 
+
+  };
   return (
-    <Router>
+    //<Router>
       <div className="App">
-        
+
         <header className="App-header">
         <img src="/logoStockm.png"></img>
-
+        {hideButtons() ? null : (
+          <>
           <button onClick = {startRound} class= "round">Start Round</button>
-          <Link to="/blogs">
+          <Link to="/ConfigPlay">
             <button onClick = {configurePlayer} class= "round">Configure Player</button>
           </Link>
-          <button onClick = {configureAI} class= "round">Configure AI</button>
-          <button onClick = {configureGameMode} class= "round">Game Mode</button>
+            <button onClick = {configureAI} class= "round">Configure AI</button>
+          <Link to="/GameMode">
+            <button onClick = {configureGameMode} class= "round">Game Mode</button>
+          </Link>
+          </>
+        )}  
           <Routes>
-            <Route path="/blogs" element={<Blogs />} />
+            <Route path="/ConfigPlay" element={<ConfigPlay />} />
+            <Route path="/GameMode" element={<GameMode />} />
           </Routes>
-          <button as={Link} to="/Configure-Player">Home</button>
         </header>
         
       </div>
       
-    </Router>
+    //</Router>
   );
 }
 
 function startRound() {
-  // Handle logic for starting a round
+  
 }
 
 function configurePlayer() {
@@ -38,10 +54,10 @@ function configurePlayer() {
 }
 
 function configureAI() {
-  // Handle logic for configuring AI
+
 }
 
 function configureGameMode() {
-  // Handle logic for configuring the game mode
+
 }
 export default App;
