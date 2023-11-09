@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import { BrowserRouter as Router, Route, Routes, Link, useLocation } from 'react-router-dom';
 import ConfigPlay from './ConfigPlayer/ConfigPlay';
 import GameMode from './GameM/GameMode';
+import Profile from './Portfolio/Profile';
 import './App.css';
 
 function App() {
@@ -11,7 +12,8 @@ function App() {
     
     return(
       location.pathname === '/ConfigPlay'||
-      location.pathname === '/GameMode'
+      location.pathname === '/GameMode' ||
+      location.pathname === '/Profile'
     ); 
 
   };
@@ -23,7 +25,9 @@ function App() {
         <img src="/logoStockm.png"></img>
         {hideButtons() ? null : (
           <>
-          <button onClick = {startRound} class= "round">Start Round</button>
+          <Link to="/Profile">
+            <button onClick = {startRound} class= "round">Start Round</button>
+          </Link>
           <Link to="/ConfigPlay">
             <button onClick = {configurePlayer} class= "round">Configure Player</button>
           </Link>
@@ -36,6 +40,7 @@ function App() {
           <Routes>
             <Route path="/ConfigPlay" element={<ConfigPlay />} />
             <Route path="/GameMode" element={<GameMode />} />
+            <Route path="/Profile" element={<Profile />}/>
           </Routes>
         </header>
         
