@@ -1,4 +1,6 @@
 import React,  { useState, useEffect } from 'react';
+import TradingViewWidget from 'react-tradingview-widget';
+import './Profile.css';
 
 
 function Portfolio(){
@@ -43,7 +45,7 @@ function Portfolio(){
 
     return (
         <div>
-          <h1>Portfolio</h1>
+          
           {info && (
             <div>
               <p>Current Capital:</p>
@@ -51,7 +53,23 @@ function Portfolio(){
               <button onClick = {placeTrade} class= "round">Place Trade</button>
             </div>
           )}
+        
+        <div className = "containerStyle">
+        <TradingViewWidget
+          symbol="AAPL"  
+          locale="en"
+          interval="1D"
+          timezone="America/New_York"
+          theme="dark"
+          style="1"
+          toolbar_bg="#f1f3f6"
+          enable_publishing={false}
+          allow_symbol_change={true}
+          container_id="tradingview-widget-container"
+        />
         </div>
+
+      </div>
       );
 
 }

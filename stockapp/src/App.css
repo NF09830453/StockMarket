@@ -28,6 +28,15 @@
   color: #61dafb;
 }
 
+.logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px; 
+  height: auto; 
+}
+
+
 button.round {
   background-color: rgba(40, 252, 188, 0.808);
   box-shadow: 0 2px 6px darkslategray;

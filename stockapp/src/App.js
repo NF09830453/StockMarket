@@ -7,8 +7,9 @@ import './App.css';
 
 function App() {
   const location = useLocation();
+  const logos = location.pathname === '/Profile' ? 'logo' : '';
   const hideButtons = () => {
-    // specify the routes for hidden buttons
+    // specifies the routes for hidden buttons
     
     return(
       location.pathname === '/ConfigPlay'||
@@ -22,7 +23,7 @@ function App() {
       <div className="App">
 
         <header className="App-header">
-        <img src="/logoStockm.png"></img>
+        <img src="/logoStockm.png" className={logos}></img>
         {hideButtons() ? null : (
           <>
           <Link to="/Profile">
