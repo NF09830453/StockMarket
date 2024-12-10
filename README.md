@@ -39,33 +39,8 @@ Game Modes:
     
 ![Screenshot 2023-11-07 231633](https://github.com/user-attachments/assets/df4774b9-edf2-4e16-962c-cc547a77e716)
 
+![Screenshot 2024-10-01 160359](https://github.com/user-attachments/assets/60bda93f-3e3c-4946-bc09-22f1282c20ad)
 
-Directory structure:
-└── NF09830453-StockMarket
-    ├── stockapp
-    │   ├── public
-    │   │   ├── manifest.json
-    │   │   ├── index.html
-    │   │   ├── favicon.ico
-    │   │   ├── robots.txt
-    │   │   └── Config.HTML
-    │   ├── Backend
-    │   │   └── base.py
-    │   ├── package.json
-    │   ├── README.md
-    │   └── src
-    │       ├── Portfolio
-    │       │   ├── Profile.css
-    │       │   └── Profile.js
-    │       ├── setupTests.js
-    │       ├── GameM
-    │       │   └── GameMode.js
-    │       ├── index.css
-    │       ├── App.js
-    │       ├── DynamicConfig.js
-    │       ├── reportWebVitals.js
-    │       ├── ConfigPlayer
-    │       │   └── ConfigPlay.js
     │       ├── App.css
     │       ├── App.test.js
     │       └── index.js
