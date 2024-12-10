@@ -1,4 +1,4 @@
-Stock Market Game
+# Stock Market Game
 
 A React-based stock market simulation game with real-time trading features and configurable game modes.
 Features
