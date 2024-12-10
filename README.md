@@ -41,7 +41,3 @@ Game Modes:
 
 ![Screenshot 2024-10-01 160359](https://github.com/user-attachments/assets/60bda93f-3e3c-4946-bc09-22f1282c20ad)
 
-    │       ├── App.css
-    │       ├── App.test.js
-    │       └── index.js
-    └── README.md
